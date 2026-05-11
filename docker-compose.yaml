@@ -1,0 +1,12 @@
+volumes:
+  test-client-data:
+
+services:
+  client:
+    container_name: test-client
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - 3001:3000
